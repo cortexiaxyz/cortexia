@@ -4,17 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cortexia AI - Decentralized Agent Ecosystem</title>
-    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        darkBg: '#05070f',
-                        cardBg: '#0d1121',
+                        darkBg: '#03050a',
+                        cardBg: '#090d1a',
                         accentPurp: '#8b5cf6',
                         accentCyan: '#06b6d4',
+                    },
+                    animation: {
+                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
                     }
                 }
             }
@@ -26,15 +28,125 @@
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
-        .hero-banner {
-            background: linear-gradient(180deg, rgba(139, 92, 246, 0.15) 0%, rgba(5, 7, 15, 0) 100%), 
-                        url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=80');
-            background-size: cover;
-            background-position: center;
+        /* Efek Grid Futuristik di Latar Belakang */
+        .grid-bg {
+            background-image: linear-gradient(rgba(6, 182, 212, 0.05) 1px, transparent 1px),
+                              linear-gradient(90deg, rgba(6, 182, 212, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            background-position: center top;
         }
     </style>
 </head>
-<body class="bg-darkBg text-gray-300 font-sans antialiased scroll-smooth">
+<body class="bg-darkBg text-gray-300 font-sans antialiased scroll-smooth grid-bg">
+
+    <header class="border-b border-gray-900/80 sticky top-0 bg-darkBg/70 backdrop-blur-xl z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wider text-white flex items-center gap-2 group cursor-pointer">
+                <span class="transition-transform group-hover:rotate-12 duration-300">🧠</span> CORTEXIA<span class="text-cyan-400 text-sm tracking-normal font-mono">.AI</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#features" class="hover:text-cyan-400 transition-colors duration-200">Features</a>
+                <a href="#ecosystem" class="hover:text-cyan-400 transition-colors duration-200">Ecosystem</a>
+                <a href="#terminal" class="hover:text-cyan-400 transition-colors duration-200">Live Console</a>
+                <a href="https://x.com/cortexia_ai" target="_blank" class="hover:text-cyan-400 transition-colors duration-200">Twitter / X</a>
+            </nav>
+
+            <a href="https://github.com/cortexiaxyz/cortexia" target="_blank" class="bg-cyan-500 hover:bg-cyan-400 text-darkBg px-5 py-2 rounded-xl text-sm font-bold transition-all duration-300 shadow-lg shadow-cyan-500/20 hover:shadow-cyan-500/40 hover:-translate-y-0.5">
+                Launch Console
+            </a>
+        </div>
+    </header>
+
+    <section class="relative pt-32 pb-20 text-center overflow-hidden">
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-purple-500/10 blur-[120px] rounded-full pointer-events-none animate-pulse-slow"></div>
+        <div class="absolute top-1/3 left-1/3 w-[300px] h-[300px] bg-cyan-500/10 blur-[100px] rounded-full pointer-events-none animate-pulse-slow"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <span class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 uppercase tracking-widest backdrop-blur-sm">
+                <span class="w-2 h-2 rounded-full bg-cyan-400 animate-ping"></span>
+                The Next Gen Autonomous Network
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 leading-tight max-w-4xl mx-auto tracking-tight">
+                Decentralized AI Agents <br>Built for the <span class="gradient-text">Future of Web3</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto mt-6 text-base md:text-lg leading-relaxed">
+                Cortexia is an open-source platform bridging autonomous intelligence with modern web infrastructure. Build, deploy, and scale your AI workflows instantly.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://github.com/cortexiaxyz/cortexia" target="_blank" class="bg-white text-darkBg font-bold px-8 py-3.5 rounded-xl hover:bg-gray-200 transition-all duration-200 shadow-xl flex items-center justify-center gap-2">
+                    Build on GitHub
+                </a>
+                <a href="https://x.com/cortexia_ai" target="_blank" class="border border-gray-800 hover:border-gray-600 font-semibold px-8 py-3.5 rounded-xl transition-all duration-200 flex items-center justify-center gap-2 text-white bg-darkBg/40 backdrop-blur-sm">
+                    Join Community X
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="terminal" class="container mx-auto px-6 pb-20 max-w-4xl">
+        <div class="rounded-2xl border border-gray-800/80 bg-[#050814] shadow-2xl overflow-hidden shadow-cyan-500/5">
+            <div class="bg-gray-900/60 px-4 py-3 border-b border-gray-800/60 flex items-center justify-between">
+                <div class="flex space-x-2">
+                    <div class="w-3 h-3 rounded-full bg-red-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-yellow-500/80"></div>
+                    <div class="w-3 h-3 rounded-full bg-green-500/80"></div>
+                </div>
+                <span class="text-xs font-mono text-gray-500">cortexia-agent-node --live</span>
+                <div class="w-4"></div>
+            </div>
+            <div class="p-6 font-mono text-xs md:text-sm text-cyan-400/90 space-y-2 leading-relaxed min-h-[220px]">
+                <p class="text-gray-500">&gt; npm run start:agent</p>
+                <p class="text-purple-400">[info] Initializing Cortexia Core Architecture v1.0.0...</p>
+                <p class="text-white">[success] Connected to Decentralized Network Node: cortexiaai.xyz</p>
+                <p class="text-emerald-400">[agent] Syncing real-time LLM neural workflows... OK</p>
+                <p class="text-yellow-400 animate-pulse">[running] Monitoring on-chain events & off-chain webhooks...</p>
+                <p class="text-gray-500 text-right mt-4 text-[10px]">System stable. Awaiting instructions.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="ecosystem" class="container mx-auto px-6 py-20 border-t border-gray-900/60">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-cyan-400 font-mono text-sm uppercase tracking-wider">Modular Architecture</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">Autonomous Network Infrastructure</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    We are constructing an intelligence layer designed to execute complex computational tasks seamlessly. Fully integrated with decentralized open repositories and guided natively by global communities.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span class="text-cyan-400 mt-1">🤖</span>
+                        <div>
+                            <strong class="text-white block">Self-Evolving Agents</strong>
+                            <span class="text-sm text-gray-400">Agents capable of executing complex instructions on-chain and off-chain.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-purple-400 mt-1">📦</span>
+                        <div>
+                            <strong class="text-white block">Open-Source Repositories</strong>
+                            <span class="text-sm text-gray-400">Publicly auditable core code base empowering developers worldwide.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-cardBg p-2 aspect-video flex items-center justify-center group shadow-2xl">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Ecosystem Graphic" class="rounded-xl object-cover w-full h-full opacity-60 group-hover:scale-105 transition duration-500">
+                <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="features" class="bg-cardBg/20 border-t border-b border-gray-900/80 py-20 backdrop-blur-sm">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white tracking-tight">Why Cortexia?</h2>
+                <p class="text-gray-400 mt-2">Intelligent frameworks backed by transparent, community-driven development.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="p-8 rounded-2xl bg-cardBg border border-gray-900 hover:border-cyan-5<body class="bg-darkBg text-gray-300 font-sans antialiased scroll-smooth">
 
     <!-- NAVBAR -->
     <header class="border-b border-gray-900 sticky top-0 bg-darkBg/80 backdrop-blur-md z-50">
