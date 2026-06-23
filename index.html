@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cortexia AI - Decentralized Agent Ecosystem</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        darkBg: '#05070f',
+                        cardBg: '#0d1121',
+                        accentPurp: '#8b5cf6',
+                        accentCyan: '#06b6d4',
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text {
+            background: linear-gradient(to right, #a78bfa, #22d3ee);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-banner {
+            background: linear-gradient(180deg, rgba(139, 92, 246, 0.15) 0%, rgba(5, 7, 15, 0) 100%), 
+                        url('https://images.unsplash.com/photo-1639762681485-074b7f938ba0?auto=format&fit=crop&w=1600&q=80');
+            background-size: cover;
+            background-position: center;
+        }
+    </style>
+</head>
+<body class="bg-darkBg text-gray-300 font-sans antialiased scroll-smooth">
+
+    <!-- NAVBAR -->
+    <header class="border-b border-gray-900 sticky top-0 bg-darkBg/80 backdrop-blur-md z-50">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-wider text-white flex items-center gap-2">
+                🧠 CORTEXIA<span class="text-cyan-400 text-sm tracking-normal font-mono">.AI</span>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="#features" class="hover:text-cyan-400 transition">Features</a>
+                <a href="#ecosystem" class="hover:text-cyan-400 transition">Ecosystem</a>
+                <a href="https://x.com/cortexia_ai" target="_blank" class="hover:text-cyan-400 transition">Twitter / X</a>
+                <a href="https://github.com/cortexiaxyz/cortexia" target="_blank" class="hover:text-cyan-400 transition">GitHub</a>
+            </nav>
+
+            <a href="https://github.com/cortexiaxyz/cortexia" target="_blank" class="bg-cyan-500 hover:bg-cyan-600 text-darkBg px-5 py-2 rounded-xl text-sm font-bold transition shadow-lg shadow-cyan-500/20">
+                Launch Console
+            </a>
+        </div>
+    </header>
+
+    <!-- HERO BANNER SECTION -->
+    <section class="hero-banner relative pt-32 pb-24 text-center border-b border-gray-900">
+        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-darkBg"></div>
+        
+        <div class="container mx-auto px-6 relative z-10">
+            <span class="px-4 py-1.5 rounded-full text-xs font-semibold bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 uppercase tracking-widest">
+                The Next Gen Autonomous Network
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white mt-6 leading-tight max-w-4xl mx-auto">
+                Decentralized AI Agents <br>Built for the <span class="gradient-text">Future of Web3</span>
+            </h1>
+            <p class="text-gray-400 max-w-2xl mx-auto mt-6 text-base md:text-lg">
+                Cortexia is an open-source platform bridging autonomous intelligence with modern web infrastructure. Build, deploy, and scale your AI workflows instantly.
+            </p>
+            <div class="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+                <a href="https://github.com/cortexiaxyz/cortexia" target="_blank" class="bg-white text-darkBg font-bold px-8 py-3.5 rounded-xl hover:bg-gray-200 transition flex items-center justify-center gap-2">
+                    Build on GitHub
+                </a>
+                <a href="https://x.com/cortexia_ai" target="_blank" class="border border-gray-800 hover:border-gray-600 font-semibold px-8 py-3.5 rounded-xl transition flex items-center justify-center gap-2 text-white">
+                    Join Community X
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ECOSYSTEM SECTION -->
+    <section id="ecosystem" class="container mx-auto px-6 py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <span class="text-cyan-400 font-mono text-sm uppercase tracking-wider">Modular Architecture</span>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mt-2 mb-6">Autonomous Network Infrastructure</h2>
+                <p class="text-gray-400 leading-relaxed mb-6">
+                    We are constructing an intelligence layer designed to execute complex computational tasks seamlessly. Fully integrated with decentralized open repositories and guided natively by global communities.
+                </p>
+                <ul class="space-y-4">
+                    <li class="flex items-start gap-3">
+                        <span class="text-cyan-400 mt-1">🤖</span>
+                        <div>
+                            <strong class="text-white block">Self-Evolving Agents</strong>
+                            <span class="text-sm text-gray-400">Agents capable of executing complex instructions on-chain and off-chain.</span>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <span class="text-purple-400 mt-1">📦</span>
+                        <div>
+                            <strong class="text-white block">Open-Source Repositories</strong>
+                            <span class="text-sm text-gray-400">Publicly auditable core code base empowering developers worldwide.</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="relative rounded-2xl overflow-hidden border border-gray-800 bg-cardBg p-2 aspect-video flex items-center justify-center">
+                <img src="https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?auto=format&fit=crop&w=800&q=80" alt="Ecosystem Graphic" class="rounded-xl object-cover w-full h-full opacity-80">
+                <div class="absolute inset-0 bg-gradient-to-t from-cardBg via-transparent to-transparent"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FEATURE SECTION -->
+    <section id="features" class="bg-cardBg/30 border-t border-b border-gray-900 py-20">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-3xl font-bold text-white">Why Cortexia?</h2>
+                <p class="text-gray-400 mt-2">Intelligent frameworks backed by transparent, community-driven development.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 rounded-2xl bg-cardBg border border-gray-800 hover:border-cyan-500/30 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 group-hover:bg-cyan-500 group-hover:text-darkBg transition font-mono font-bold">
+                        &lt;/&gt;
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">100% Open Source</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Our underlying code is transparent and open for contributions. Explore the full stack over at GitHub on github.com/cortexiaxyz/cortexia.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 rounded-2xl bg-cardBg border border-gray-800 hover:border-purple-500/30 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:bg-purple-500 group-hover:text-white transition text-xl">
+                        𝕏
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Active X Community</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Stay connected with real-time development feeds, algorithmic updates, and agent feature announcements via social on @cortexia_ai.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 rounded-2xl bg-cardBg border border-gray-800 hover:border-cyan-500/30 transition group">
+                    <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center text-cyan-400 mb-6 group-hover:bg-cyan-500 group-hover:text-darkBg transition text-xl">
+                        ⚡
+                    </div>
+                    <h3 class="text-xl font-bold text-white mb-3">Seamless Integration</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Incorporate custom datasets, API webhooks, and complex workflows into your ecosystem with minor configuration.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-darkBg py-12">
+        <div class="container mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div>
+                <div class="text-xl font-bold text-white tracking-wider mb-2">🧠 CORTEXIA</div>
+                <p class="text-xs text-gray-500 max-w-sm">Architecting open, decentralized digital intelligence frameworks.</p>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-3">
+                <div class="flex space-x-6 text-sm">
+                    <a href="https://x.com/cortexia_ai" target="_blank" class="text-gray-400 hover:text-white transition">Twitter / X</a>
+                    <a href="https://github.com/cortexiaxyz/cortexia" target="_blank" class="text-gray-400 hover:text-white transition">GitHub</a>
+                </div>
+                <div class="text-xs text-gray-600">
+                    &copy; 2026 cortexiaai.xyz. All rights reserved.
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
